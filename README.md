@@ -6,7 +6,7 @@ Validations for Ohm::Model.
 Usage
 -----
 
-```
+```ruby
 class User < Ohm::Model
   include Ohm::Validations
 
