@@ -6,21 +6,26 @@ module Ohm
 
     module Callbacks
       def valid?
-        before_validation
+        before_validate
 
         result = super
 
-        after_validation
+        after_validate
 
         result
       end
 
-      protected
-
-      def before_validation
+      def save
+        return if not valid?
+        super
       end
 
-      def after_validation
+      protected
+
+      def before_validate
+      end
+
+      def after_validate
       end
     end
 

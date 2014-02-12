@@ -22,20 +22,24 @@ class User < Ohm::Model
     assert_email(:email)
   end
 
-  def before_validation
+  def before_validate
     @before = true
   end
 
-  def after_validation
+  def after_validate
     @after = true
   end
 end
 
-user = User.new({})
+User.create
+# => nil
+
+user = User.new
 user.valid? # => false
 
 user.update_attributes(name: "jhon", email: "jhon@doe.com")
 user.valid? # => true
+user.save   # => user
 
 user.before # => true
 user.after  # => true
