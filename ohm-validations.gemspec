@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
   s.name        = "ohm-validations"
   s.version     = "0.0.2"
-  s.summary     = "Validation for Ohm::Model."
+  s.summary     = "Validations for Ohm models."
   s.description = s.summary
-  s.authors     = ["Francesco Rodríguez"]
-  s.email       = ["frodsan@me.com"]
-  s.homepage    = "https://github.com/frodsan/ohm-validations"
+  s.authors     = ["Francesco Rodríguez", "Mayn Kjær"]
+  s.email       = ["frodsan@me.com", "mayn.kjaer@gmail.com"]
+  s.homepage    = "https://github.com/harmoni/ohm-validations"
   s.license     = "MIT"
 
   s.files = `git ls-files`.split("\n")
