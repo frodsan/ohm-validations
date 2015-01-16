@@ -1,4 +1,4 @@
-ohm -v 2.0.0.rc1
-scrivener -v 0.2.0
-cutest -v 1.2.1
-ohm-contrib -v 2.0.0.rc1
+cutest -v 1.2.2
+ohm -v 2.0.1
+ohm-contrib -v 2.0.1
+scrivener -v 0.3.0
