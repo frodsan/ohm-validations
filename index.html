@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Ohm-validations by harmoni</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Ohm-validations</h1>
+        <p>Validations for Ohm models.</p>
+
+        <p class="view"><a href="https://github.com/harmoni/ohm-validations">View the Project on GitHub <small>harmoni/ohm-validations</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/harmoni/ohm-validations/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/harmoni/ohm-validations/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/harmoni/ohm-validations">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="ohm-validations" class="anchor" href="#ohm-validations" aria-hidden="true"><span class="octicon octicon-link"></span></a>ohm-validations</h1>
+
+<p>Validations for Ohm::Model.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-ruby"><pre><span class="pl-k">class</span> <span class="pl-en">User<span class="pl-e"> &lt; Ohm::Model</span></span>
+  <span class="pl-k">include</span> <span class="pl-s3">Ohm</span>::<span class="pl-vo">Validations</span>
+
+  attribute <span class="pl-c1">:name</span>
+  attribute <span class="pl-c1">:email</span>
+
+  <span class="pl-k">attr</span> <span class="pl-c1">:before</span>, <span class="pl-c1">:after</span>
+
+  <span class="pl-k">protected</span>
+
+  <span class="pl-k">def</span> <span class="pl-en">validate</span>
+    assert_present(<span class="pl-c1">:name</span>)
+    assert_email(<span class="pl-c1">:email</span>)
+  <span class="pl-k">end</span>
+
+  <span class="pl-k">def</span> <span class="pl-en">before_validate</span>
+    <span class="pl-vo">@before</span> <span class="pl-k">=</span> <span class="pl-c1">true</span>
+  <span class="pl-k">end</span>
+
+  <span class="pl-k">def</span> <span class="pl-en">after_validate</span>
+    <span class="pl-vo">@after</span> <span class="pl-k">=</span> <span class="pl-c1">true</span>
+  <span class="pl-k">end</span>
+<span class="pl-k">end</span>
+
+<span class="pl-s3">User</span>.create
+<span class="pl-c"># =&gt; nil</span>
+
+user <span class="pl-k">=</span> <span class="pl-s3">User</span>.<span class="pl-k">new</span>
+user.valid? <span class="pl-c"># =&gt; false</span>
+
+user.update_attributes(<span class="pl-c1">name:</span> <span class="pl-s1"><span class="pl-pds">"</span>jhon<span class="pl-pds">"</span></span>, <span class="pl-c1">email:</span> <span class="pl-s1"><span class="pl-pds">"</span>jhon@doe.com<span class="pl-pds">"</span></span>)
+user.valid? <span class="pl-c"># =&gt; true</span>
+user.save   <span class="pl-c"># =&gt; user</span>
+
+user.before <span class="pl-c"># =&gt; true</span>
+user.after  <span class="pl-c"># =&gt; true</span></pre></div>
+
+<p>Check <a href="https://github.com/soveran/scrivener">scrivener</a> project for more information
+about the available validations.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<pre><code>$ gem install ohm-validations
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/harmoni">harmoni</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
