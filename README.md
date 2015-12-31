@@ -1,4 +1,4 @@
-ohm-validations
+ohm-validations [![Build Status](https://travis-ci.org/frodsan/ohm-validations.svg)](https://travis-ci.org/frodsan/ohm-validations)
 ===============
 
 Validations for Ohm::Model.
