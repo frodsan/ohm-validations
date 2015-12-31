@@ -3,6 +3,27 @@ ohm-validations
 
 Validations for Ohm::Model.
 
+Installation
+------------
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem "ohm-validations"
+```
+
+And then execute:
+
+```
+$ bundle
+```
+
+Or install it yourself as:
+
+```
+$ gem install ohm-validations
+```
+
 Usage
 -----
 
@@ -48,11 +69,34 @@ user.after  # => true
 Check [scrivener][scrivener] project for more information
 about the available validations.
 
-Installation
+Contributing
 ------------
 
+Fork the project with:
+
 ```
-$ gem install ohm-validations
+$ git clone git@github.com:frodsan/ohm-validations.git
 ```
 
+To install dependencies, use:
+
+```
+$ bundle install
+```
+
+To run the test suite, do:
+
+```
+$ rake test
+```
+
+For bug reports and pull requests use [GitHub][issues].
+
+License
+-------
+
+This gem is released under the [MIT License][mit].
+
+[mit]: http://www.opensource.org/licenses/MIT
+[issues]: https://github.com/frodsan/ohm-validations/issues
 [scrivener]: https://github.com/soveran/scrivener
