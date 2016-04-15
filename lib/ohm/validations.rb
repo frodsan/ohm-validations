@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "scrivener/validations"
 
 module Ohm
@@ -16,7 +18,7 @@ module Ohm
       end
 
       def save
-        return if not valid?
+        return unless valid?
         super
       end
 

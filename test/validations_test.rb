@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "bundler/setup"
 require "minitest/autorun"
 require "minitest/pride"
@@ -12,7 +14,7 @@ class User < Ohm::Model
 
   attribute :name
 
-  attr :before, :after
+  attr_reader :before, :after
 
   def validate
     assert_present(:name)
@@ -33,7 +35,6 @@ class ValidationsTest < Minitest::Test
   setup do
     Ohm.flush
   end
-
 
   test "validations" do
     user = User.new
