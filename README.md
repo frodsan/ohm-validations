@@ -34,7 +34,7 @@ class User < Ohm::Model
   attribute :name
   attribute :email
 
-  attr :before, :after
+  attr_reader :before, :after
 
   protected
 
