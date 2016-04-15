@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.summary     = "Validations for Ohm models"
   s.description = s.summary
   s.author      = "Francesco Rodríguez"
-  s.email       = "frodsan@protonmail.ch"
+  s.email       = "hello@frodsan.com"
   s.homepage    = "https://github.com/frodsan/ohm-validations"
   s.license     = "MIT"
 
