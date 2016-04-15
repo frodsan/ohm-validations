@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.files      = Dir["LICENSE", "README.md", "lib/**/*.rb"]
   s.test_files = Dir["test/**/*.rb"]
 
-  s.add_dependency "ohm", "~> 2.0"
+  s.add_dependency "ohm", ">= 2.0", "~> 3.0"
   s.add_dependency "scrivener", "~> 1.0"
   s.add_development_dependency "minitest", "~> 5.8"
   s.add_development_dependency "minitest-sugar", "~> 2.1"
