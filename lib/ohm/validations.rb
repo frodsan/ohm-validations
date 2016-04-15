@@ -19,6 +19,7 @@ module Ohm
 
       def save
         return unless valid?
+
         super
       end
 
